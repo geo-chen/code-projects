@@ -23,4 +23,13 @@ Screenshots:
 | ![](https://github.com/user-attachments/assets/6aaa9bbe-3f9e-48b3-86e0-8d7c063006f7) | ![](https://github.com/user-attachments/assets/10f90c46-3e7b-4736-af36-9777bef0639d) | ![](https://github.com/user-attachments/assets/ff01c8be-50cf-4e59-a704-14654e89c698) |
 
 
-### Finding 2: 
+### Finding 2: SQL Injection
+
+The insecure usage of "mysql_*", which is deprecated, is used across the project. Here's a sample endpoint:
+
+ - /onexam/addmembers.php
+
+
+### Finding 3: Unsafe File Upload
+
+ - /onexam/admin_pic.php
