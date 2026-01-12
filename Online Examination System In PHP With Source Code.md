@@ -23,13 +23,20 @@ Screenshots:
 | ![](https://github.com/user-attachments/assets/6aaa9bbe-3f9e-48b3-86e0-8d7c063006f7) | ![](https://github.com/user-attachments/assets/10f90c46-3e7b-4736-af36-9777bef0639d) | ![](https://github.com/user-attachments/assets/ff01c8be-50cf-4e59-a704-14654e89c698) |
 
 
-### Finding 2: SQL Injection
+### Finding 2: SQL Injection on Login Page
 
-The insecure usage of "mysql_*", which is deprecated, is used across the project. Here's a sample endpoint:
+The insecure usage of "mysql_*", which is deprecated, is used across the project. Here's a sample endpoint where an sqli gets you logged into the admin account (muler, by default):
 
- - /onexam/addmembers.php
+ - /onexam/index.php
+
+![2026-01-13 00-10-20](https://github.com/user-attachments/assets/ddab7ee9-38f6-4e9c-9579-692cde9dd887)
 
 
-### Finding 3: Unsafe File Upload
+### Finding 3: Remote Code Execution via Unsafe File Upload
 
- - /onexam/admin_pic.php
+The "Change Picture" feature invokes "/onexam/admin_pic.php" to replace the logo for the website, but does not restrict on file types. As a result, an attacker can upload a php webshell and gain remote code execution:
+
+![2026-01-13 00-10-20 (2)](https://github.com/user-attachments/assets/c3854391-61bf-4bc8-b249-5ae8d5a45c7e)
+
+![2026-01-13 00-10-20 (3)](https://github.com/user-attachments/assets/26693f5c-3af0-4283-95dd-dc9e89682ea1)
+
