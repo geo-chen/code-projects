@@ -17,4 +17,10 @@ Multiple XSS vulnerabilities were found in the following forms:
  - /onexam/add_teen.php (on practically all available fields)
  - /onexam/admin_user.php (on practically all available fields)
 
+Screenshots:
+| ![](https://github.com/user-attachments/assets/67de6e00-6ccb-479a-aba3-ed09b461f051) | ![](https://github.com/user-attachments/assets/8df1b8e4-bd29-4695-8025-9abefc93348d) | ![](https://github.com/user-attachments/assets/e01e282e-7b99-42d6-81a4-37c79820ae32) |
+|---|---|---|
+| ![](https://github.com/user-attachments/assets/6aaa9bbe-3f9e-48b3-86e0-8d7c063006f7) | ![](https://github.com/user-attachments/assets/10f90c46-3e7b-4736-af36-9777bef0639d) | ![](https://github.com/user-attachments/assets/ff01c8be-50cf-4e59-a704-14654e89c698) |
+
+
 ### Finding 2: 
