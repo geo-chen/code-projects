@@ -1,14 +1,14 @@
 # Online Examination System In PHP With Source Code
 
-
 [Online Examination System In PHP With Source Code](https://code-projects.org/online-examination-system-in-php-with-source-code-2/) is a popular Examination CMS released in January 2026. 
 
 Within days of its v2 release, the open-source project has exceeded 15k downloads:
 <img width="1119" height="304" alt="image" src="https://github.com/user-attachments/assets/8fc0df89-fb33-4596-94d8-7a09f5fec17f" />
 
-This exercise is jointly run with @JoshuaSim24.
+This is an exercise with a class on exploratory open-source pentesting.
 
 ### Finding 1: Stored XSS in all "add" pages
+**(CVE-2026-1421:	code-projects Online Examination System 1 Cross Site Scripting)**
 
 Multiple XSS vulnerabilities were found in the following forms:
 
@@ -24,6 +24,7 @@ Screenshots:
 
 
 ### Finding 2: SQL Injection on Login Page
+**(CVE-2026-1422:	code-projects Online Examination System 1 SQL Injection)**
 
 The insecure usage of "mysql_*", which is deprecated, is used across the project. Here's a sample endpoint where an sqli gets you logged into the admin account (muler, by default):
 
@@ -33,6 +34,7 @@ The insecure usage of "mysql_*", which is deprecated, is used across the project
 
 
 ### Finding 3: Remote Code Execution via Unsafe File Upload
+**(CVE-2026-1423:	code-projects Online Examination System 1 Unrestricted Upload)**
 
 The "Change Picture" feature invokes "/onexam/admin_pic.php" to replace the logo for the website, but does not restrict on file types. As a result, an attacker can upload a php webshell and gain remote code execution:
 
